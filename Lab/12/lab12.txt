@@ -1,0 +1,14 @@
+exer. 1
+	09 bb 82 ea 29 48 7d db 1f 15
+	TLB Hits = 1
+	TLB Misses = 9
+	Page Hits = 0
+	Page Faults = 9
+
+	no page hits because if TLB hits, it doesn't look at page table, so page hits only happens if there is a TLB miss but the page table has it. This doesn't happen because TLB size = memory frame size.
+
+exer. 2
+	11 31 51 72 93 b4 d2 f0 00 22  -> all the virtual pages to be different b/c TLB can only hold 4 VPNs
+
+exer. 3
+	increase memory size b/c page table can hold more frames than 4 (size of TLB) and page faults happen when the memory requested needs to be gotten from disk

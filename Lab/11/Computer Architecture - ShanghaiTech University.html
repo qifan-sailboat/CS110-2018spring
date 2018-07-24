@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://shtech.org/course/ca/18s/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Computer Architecture - ShanghaiTech University</title>
+<link rel="shortcut icon" type="image/png" href="http://shtech.org/course/ca/18s/favicon.ico">
+<script src="./Computer Architecture - ShanghaiTech University_files/jquery.min.js"></script> 
+<link rel="stylesheet" href="./Computer Architecture - ShanghaiTech University_files/theme.jui.css">
+<link rel="stylesheet" href="./Computer Architecture - ShanghaiTech University_files/jquery-ui.min.decoration.css">
+<script src="./Computer Architecture - ShanghaiTech University_files/jquery.tablesorter.min.js"></script>
+<script src="./Computer Architecture - ShanghaiTech University_files/jquery.metadata.js"></script>
+<script src="./Computer Architecture - ShanghaiTech University_files/jquery.tablesorter.widgets.min.js"></script>
+<script>
+$(function() {
+    $(".tablesorter").tablesorter({
+        theme: 'jui',
+        headerTemplate: '{content} {icon}',
+        widgets: ['uitheme', 'zebra'],
+        widgetOptions : {
+          zebra: ["even", "odd"],
+        }
+    });
+});
+</script>
+<style>
+ code {background-color: #ddeeff; color: #000000;}
+
+ img.people {width: 150px;}
+
+ table.people{ 
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+text-align:  center;
+}
+
+</style>
+</head>
+<body>
+
+<!--
+<nav>
+<a href="#schedule">Schedule</a>
+</nav>
+-->
+
+<header>
+<h2>Computer Architecture</h2>
+<h3>Spring 2018</h3>
+<h4><a href="http://sist.shanghaitech.edu.cn/">School of Information Science and Technology SIST</a><br> <a href="http://www.shanghaitech.edu.cn/">SchanghaiTech University</a>
+</h4>
+<table>
+  <tbody><tr><td><b>Lecture</b></td><td>Tuesday, 10:15-11:55. 教学中心 (Teaching Center) 303</td></tr>
+  <tr><td><b>Lecture</b></td><td>Thursday, 10:15-11:55. 教学中心 (Teaching Center) 303</td></tr>
+  <tr><td><b>Discussions</b></td><td>Wednesday 19:35-21:15. 教学中心 (Teaching Center) 303</td></tr>
+  <tr><td><b>Lab 1</b></td><td>Monday, 13:00-14:40. SIST 1B-106; TA: Jianxiong Cai </td></tr>
+  <tr><td><b>Lab 2</b></td><td>Monday, 15:00-16:40. SIST 1B-106; TA: Yuyang Rong </td></tr>
+  <tr><td><b>Lab 3</b></td><td>Tuesday, 13:00-14:40. SIST 1B-106; TA: Anqi Pang </td></tr>
+  <tr><td><b>Lab 4</b></td><td>Tuesday, 19:35-21:15. SIST 1B-106; TA: Junren Zheng </td></tr>
+  <tr><td><b>Lab 5</b></td><td>Thursday, 13:00-14:40. SIST 1B-106; TA: Yiming Mao </td></tr>
+  <tr><td><b>Lab 6</b></td><td>Thursday, 19:35-21:15. SIST 1B-106; TA: Zhonglin Nian </td></tr>
+  <tr><td><b>Forum</b></td><td>Post all your questions on the <a href="https://piazza.com/shanghaitech.edu.cn/spring2018/cs110/home#">forum</a>.</td></tr>
+  <tr><td><b>Forum</b></td><td>Submit your homework and projects to <a href="http://autolab.shanghaitech.edu.cn/">autolab</a>.</td></tr>
+</tbody></table>
+
+
+</header>
+
+
+
+<section>
+<table id="reading" class="tablesorter tablesorter-jui ui-widget ui-widget-content ui-corner-all" role="grid" aria-labelledby="theCaption">
+<caption class="ui-widget-content ui-corner-all">Schedule</caption>
+<thead><tr role="row" class="tablesorter-headerRow"><th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Week : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Week <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Date : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Date <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Topic : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Topic <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Reading : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Reading <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="4" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Discussion : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Discussion <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="5" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Homework : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Homework <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="6" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Lab : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Lab <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+<th class="{sorter: false} tablesorter-header tablesorter-headerUnSorted ui-widget-header ui-corner-all ui-state-default" data-column="7" tabindex="0" scope="col" role="columnheader" aria-disabled="false" aria-controls="reading" unselectable="on" aria-sort="none" aria-label="Project : No sort applied, activate to apply an ascending sort" style="user-select: none;"><div class="tablesorter-wrapper" style="position:relative;height:100%;width:100%"><div class="tablesorter-header-inner">Project <i class="tablesorter-icon ui-icon ui-icon-carat-2-n-s"></i></div></div></th>
+</tr></thead>
+
+<tbody aria-live="polite" aria-relevant="all">
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">1</td><td>02-27</td>
+    <td>Introduction (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L01_Introduction.pdf">pdf</a>) </td>
+    <td> P&amp;H: 2.4 </td>
+    <td rowspan="2">No Discussion</td>
+    <td rowspan="2">HW1: Autolab<br> Due Mon., March 5, 23:55</td>
+    <td rowspan="2">No Lab</td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>03-01</td>
+    <td>Introduction to C I (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L02_C_I.pdf">pdf</a>)</td>
+    <td>K&amp;R Ch. 1-5</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">2</td><td>03-05</td>
+    <td>Introduction to C II (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L03_C_II.pdf">pdf</a>)</td>
+    <td>K&amp;R Ch. 6-7</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion1.md">Discussion 1</a></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/hw/2">HW 2: C Skiplist</a><br>Due Mon., March 19, 23:55</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/1">Lab 1</a></td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>03-07</td>
+    <td> Introduction to C III (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L04_C_III.pdf">pdf</a>)</td>
+    <td> </td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">3</td><td>03-13</td>
+    <td>Intro to Assembly Language, MIPS Intro (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L05_MIPS1.pdf">pdf</a>)</td>                                                                            
+    <td>P&amp;H: 2.1 - 2.3</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion2.md">Discussion 2</a></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/2">Lab 2</a></td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>03-15</td>
+    <td>MIPS, MIPS Functions (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L06_MIPS2.pdf">pdf</a>)</td>
+    <td>P&amp;H: 2.6 - 2.9, 2.10, A.6</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">4</td><td>03-20</td>
+    <td>MIPS Instruction Formats (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L07_MIPS3.pdf">pdf</a>)</td>
+    <td>P&amp;H: 2.5, 2.10</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion3.md">Discussion 3</a> <a href="http://shtech.org/course/ca/18s/discussions/util.s">util.s</a></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/hw/3">HW 3: MIPS Quicksort</a><br>Due Mon., April 2, 23:55</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/3">Lab 3</a></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/projects/1.1/">Project 1.1: Assembler in C</a><br>
+    Due Wednesday, April 4th, 23:55</td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>03-22</td>
+    <td>Compiler, Assembler, Linker, Loader (CALL) (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L08_CALL.pdf">pdf</a>)</td>
+    <td>P&amp;H: 2.12, A.1-A.4</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">5</td><td>03-27</td>
+    <td>Intro to Synchronous Digital Systems (SDS), Logic (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L09_SDS.pdf">pdf</a>)</td>
+    <td>P&amp;H: B.2-B.3</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/4/Discussion4-CALL.pptx">Discussion 4</a> <a href="http://shtech.org/course/ca/18s/discussions/4/cond.c">cond.c</a> <a href="http://shtech.org/course/ca/18s/discussions/4/pthread.c">pthread.c</a></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/4">Lab 4</a></td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>03-29</td>
+    <td>Functional Units, FSMs (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L10_FSM.pdf">pdf</a>)</td>
+    <td>P&amp;H: 4.2, B.3-B.6</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">6</td><td>04-03</td>
+    <td>MIPS Datapath, Single-Cycle Control Intro (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L11_Datapath.pdf">pdf</a>)</td>
+    <td>P&amp;H: 4.1, 4.3, 4.4</td>
+    <td rowspan="2">No Discussion</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/hw/4">HW 4: SDS</a><br>Due Mon., April 9, 23:55</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/5">Lab 5</a></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/projects/1.2/">Project 1.2 Linker in MIPS</a><br>
+    Due Monday, April 16th, 23:55</td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td><s>04-05</s></td>
+    <td>Ching Ming Festival</td>
+    <td></td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">7</td><td>04-10</td>
+    <td>MIPS Single-Cycle Control (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L12_Control.pdf">pdf</a>)</td>
+    <td>P&amp;H: 4.5-4.8</td>
+    <td rowspan="2">Discussion 5 (Project 2.1)</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/hw/5">HW 5: TSP</a><br>Due Mon., April 23, 23:55</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/6">Lab 6</a><br>Thu.: Lab 5</td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>04-12</td>
+    <td>Guest Lecture Prof. Shu Yin<br>MIPS Pipelining (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L13_Pipelining.pdf">pdf</a>)</td>
+    <td>P&amp;H: 4.10, 4.11</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">8</td><td>04-17</td>
+    <td>Review for Midterm I; Intro Caches (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L14_Review_M1_Cache.pdf">pdf</a>)</td>
+    <td>P&amp;H: 5.1</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion6.pdf">Discussion 6</a>
+      </td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/7">Lab 7</a><br>Thu.: Lab 6</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/projects/2.1">Project 2.1</a><br>Due: Friday, May 4th 23:55<br> (<a href="http://shtech.org/course/ca/18s/notes/mid-I-firstPage.pdf">Midterm I first page</a>)</td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>04-19</td>
+    <td>Mid-Term I</td>
+    <td></td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">9</td><td>04-24</td>
+    <td>Memory Hierarchy, Caches (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L15_Caches_I.pdf">pdf</a>) </td>
+    <td>P&amp;H: 5.1 5.2 5.3</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion7-cache.pdf">Discussion 7</a></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/8">Lab 8</a><br>Thu.: Lab 7</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/notes/midterm_i.pdf">Midterm I pdf</a><br><a href="http://shtech.org/course/ca/18s/notes/midterm_i_sol.pdf">Midterm I sol</a></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>04-26</td>
+    <td> Caches: Direct-mapped, Set-associative; Multilevel Caches (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L16_Caches_II.pdf">pdf</a>) </td>
+    <td>P&amp;H: 5.4 5.8 1.6</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">10</td><td><s>05-01</s></td>
+    <td>Labor Day</td>
+    <td></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"></td>
+    <td rowspan="2">Thu.: Lab 8</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/projects/2.2">Project 2.2</a><br>Due: Friday, May 25th 23:55</td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>05-03</td>
+    <td>Performance and Floating Point Operations (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L17-PerfFP.pdf">pdf</a>)</td>
+    <td>P&amp;H: 3.5 3.9</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">11</td><td>05-08</td>
+    <td> Flynn Taxonomy, Data-Level Parallelism (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L18_DLP.pdf">pdf</a>)</td>
+    <td>P&amp;H: 1.7, 1.8, 6.1, 6.2, 6.3, 6.7</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion8.pdf">Discussion 8</a></td>
+    <td rowspan="2"></td>
+    <td rowspan="2">No Lab</td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>05-10</td>
+    <td>Thread-Level Parallelism, OpenMP Intro  (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L19_TLP1.pdf">pdf</a>)</td>
+    <td>P&amp;H: 6.5, 5.10, 2.11</td>
+  </tr> 
+
+   <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">12</td><td>05-15</td>
+    <td>Review Midterm II; Cache Coherence, OpenMP Sharing Issues, Performance (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L20_ReviewII_TLP2.pdf">pdf</a>) </td>
+    <td>P&amp;H: 5.10</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion9.zip">Discussion 9</a></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/hw/6">HW 6: Caches</a><br>Due Mon., May 28, 23:55</td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/9">Lab 9</a></td>
+    <td rowspan="2">(<a href="http://shtech.org/course/ca/18s/notes/mid-II-firstPage.pdf">Midterm II first page</a>)<br>
+      <a href="http://shtech.org/course/ca/18s/notes/midterm_ii.pdf">Midterm II pdf</a><br><a href="http://shtech.org/course/ca/18s/notes/midterm_ii_sol.pdf">Midterm II sol</a></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>05-17</td>
+    <td>Midterm II</td>
+    <td></td>
+  </tr> 
+
+   <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">13</td><td>05-22</td>
+    <td>Project 3 Details</td>
+    <td></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/discussions/discussion10_Spark.pptx">Discussion 10 (Spark)</a></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/10">Lab 10</a></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/projects/3">Project 3</a><br>Due: Wednesday, <b>June 10th</b> 23:55</td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>05-24</td>
+    <td>Guest Lecture Prof. Yajun Ha: FPGAs (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L21_FPGA.pdf">pdf</a>)</td>
+    <td></td>
+  </tr>  
+
+   <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">14</td><td>05-29</td>
+    <td>Warehouse Scale Computing, MapReduce (Spark)  (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L24_WSC.pdf">pdf</a>) </td>
+    <td><a href="http://shtech.org/course/ca/18s/notes/WSCBarrosoHolzle.pdf">The Datacenter as a Computer </a>: Ch 1, Ch 2.4, Ch 3, 5.1-5.3 </td>
+    <td rowspan="2"></td>
+    <td rowspan="2"></td>
+    <td rowspan="2">No Lab</td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>05-31</td>
+    <td>OS Support, Base and Bounds, Interrupts, Virtual Memory Intro (<a href="http://shtech.org/course/ca/18s/lectures/2018-CA-L25_OS.pdf">pdf</a>)</td>
+    <td>P&amp;H: 5.13, 5.15, 5.16</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">15</td><td>06-05</td>
+    <td>More Virtual Memory  </td>
+    <td>P&amp;H: 6.9 (only p.4-10), 4.9</td>
+    <td rowspan="2"></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/11">Lab 11</a></td>
+    <td rowspan="2">Project 4</td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>06-07</td>
+    <td>I/O: DMA, Disks, Networking </td>
+    <td>P&amp;H:  5.2, 5.5, 5.11</td>
+  </tr>
+
+  <tr role="row" class="odd ui-state-default">
+    <td rowspan="2">16</td><td>06-12</td>
+    <td>Dependability: Parity, ECC, RAID   </td>
+    <td>P&amp;H: 5.5, B-65 to B-67</td>
+    <td rowspan="2"></td>
+    <td rowspan="2"></td>
+    <td rowspan="2"><a href="http://shtech.org/course/ca/18s/labs/12">Lab 12</a></td>
+    <td rowspan="2"></td>
+  </tr><tr role="row" class="even ui-widget-content">
+    <td>06-14</td>
+    <td>Summary Lecture </td>
+    <td></td>
+  </tr>
+
+
+  <tr role="row" class="odd ui-state-default">
+    <td>18</td><td>06-26</td>
+    <td>Tuesday, June 26th, 9:00-11:00; Teaching Center 301 + 302 </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><br>
+  </td>
+  </tr>
+
+</tbody>
+</table>
+
+
+<table class="people">
+  <tbody><tr><td colspan="2"><b>Instructor</b></td></tr>
+  <tr><td colspan="2"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/Soeren_Schwertfeger_Web.jpg" alt="Sören Schwertfeger"><br> <a href="http://robotics.shanghaitech.edu.cn/people/soeren">Sören Schwertfeger 师泽仁</a> <br> &lt;<code>soerensch</code>&gt; <br> OH: You are always welcome! Tuesday 13:00-15:00; Room: 1D 201A </td></tr>
+  <tr><td colspan="2"><br><b>TAs</b><br>Please check the TA office hours on <a href="https://piazza.com/shanghaitech.edu.cn/spring2018/cs110/staff">piazza</a>.</td></tr>
+  <tr><td colspan="2" style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/yuanwj.jpg" alt="Yijun Yuan"><br>Yijun Yuan <br> &lt;<code>yuanwj</code>&gt; <br> Head TA</td>
+
+  </tr><tr><td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/zhouyang.jpg" alt="Yang Zhou"><br><a href="http://www.linkedin.com/in/makee-Zhou">Yang Zhou</a> <br> &lt;<code>zhouyang</code>&gt; </td>
+      <td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/caijx.jpg" alt="Jianxiong Cai"><br>Jianxiong Cai  <br> &lt;<code>caijx</code>&gt; </td></tr>    
+  <tr><td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/pangaq.jpg" alt="Anqi Pang"><br>Anqi Pang <br> &lt;<code>pangaq</code>&gt; </td>
+      <td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/rongyy.jpg" alt="Yuyang Rong"><br>Yuyang Rong <br> &lt;<code>rongyy</code>&gt; </td></tr>    
+  <tr><td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/maoym.jpg" alt="Yiming Mao"><br>Yiming Mao <br> &lt;<code>maoym</code>&gt; </td>
+      <td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/zhengjr.jpg" alt="Yonhao Liu"><br>Junren Zheng <br> &lt;<code>zhengjr</code>&gt; </td></tr>    
+  <tr><td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/nianzhl.jpg" alt="Zhonglin Nian"><br>Zhonglin Nian <br> &lt;<code>nianzhl</code>&gt; </td>
+      <td style="width:50%"><img class="people" src="./Computer Architecture - ShanghaiTech University_files/jiangchy.jpg" alt="Chengyue Jiang"><br>Chengyue Jiang   <br> &lt;<code>jiangchy</code>&gt; </td></tr>    
+</tbody></table>
+
+<h3>Syllabus</h3>
+<p>Check the syllabus for the CA course on egate.
+</p>
+
+<h3>Textbook</h3>
+<dl>
+  <dt><a id="PH">P&amp;H</a></dt>
+  <dd>Patterson, David A. and Hennessy, John L. <cite>Computer Organization and Design 5th edition</cite>. Morgan Kaufmann.</dd> 
+</dl>
+
+<h3>References</h3>
+<dl>
+  <dt><a id="KR"></a>K&amp;R</dt>
+  <dd> Kernighan, Brian W. and Ritchie, Dennis M. <cite>The C Programming Language (2rd ed.)</cite>. Prentice Hall.</dd>
+</dl>
+
+
+<h3>Requirements</h3>
+<dl>
+<dt>Reading</dt> 
+<dd>Read the chapters <em>before</em> class. I will not read
+  the textbook to you during class.  Rather, I will help you better
+  understand certain materials in the textbook.</dd>
+
+<dt>Class participation</dt>
+<dd>Participate actively in the discussions both in class and on the forum.</dd>
+
+<dt>Communication</dt>
+<dd>Read your email and the forum at least once in any 12 hour period (including weekends and holidays), as I may post important announcements.</dd>
+</dl>
+
+<h3>Grading</h3>
+<ul>
+  <li>Projects: 33%</li>
+  <li>Homework: 17%</li>
+  <li>Lab: 5%</li>
+  <li>Exams: 40%</li>
+  <li>Participation: 5%</li>
+</ul>
+The Engineering Design course consists of projects done in parallel to the Computer Architecture course. The projects thus contribute 33% to your overall score. Neither CA nor the project can be taken without the other.
+</section>
+
+
+<h3>Resources</h3>
+<ul>
+  <li>This course is based on <a href="http://www-inst.eecs.berkeley.edu/~cs61c/">CS61C Computer Architecture</a> from UC Berkeley.</li>
+  <li>MIPS Green Sheet: <a href="http://shtech.org/course/ca/18s/notes/MIPS_Green_Sheet.pdf">pdf</a></li>
+</ul>
+
+
+
+
+<section>
+<h3>Feedback</h3>
+<p>We always welcome any feedback on what we could do better.
+You are also welcome to send us feedback anonymously if you like.</p>
+</section>
+<footer>
+<hr style="clear: both;">
+<div style="float:left">
+<address>
+Sören Schwertfeger &lt;<code>soerensch</code> AT <code>shanghaitech.edu.cn</code>&gt;
+</address>
+Last modified: 2018-06-02
+</div>
+<div style="float:right">
+<a href="http://validator.w3.org/check?uri=referer">
+  <img src="./Computer Architecture - ShanghaiTech University_files/html5-40.png" alt="Valid HTML 5!">
+</a>
+</div>
+</footer>
+
+
+</body></html>

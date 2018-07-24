@@ -1,0 +1,82 @@
+<html class="gr__shtech_org"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><meta http-equiv="Content-Type" content="text/html">
+    <title>Project 4 - Computer Architecture I - ShanghaiTech University</title>
+    <link rel="stylesheet" type="text/css" href="./Project4_files/style.css">
+
+    <style type="text/css">
+        table{background:#cdc;border-collapse:collapse;font-family:monospace}td{border:0.125em solid #aba;padding:0.25em}thead{background:#676;color:#fff;text-transform:uppercase}
+    td{font-size: 1.2em;}
+        span.inst{color:#d00}span.rgtr{color:#00a}span.immd{color:#a0a}span.label{color:#666}
+        div.highlight{background:#cdc;padding:1em}
+        span.warn{color:#f00;font-weight:bold;}
+        table.colonly{display:inline-block;vertical-align:top;}table.colonly td{border-top:0em;border-bottom:0em;padding-top:0.1em;padding-bottom:0.1em;}td.center{text-align:center}
+    </style>
+</head>
+<body data-gr-c-s-loaded="true">
+
+
+<div class="content">
+
+    <header>
+    <h2>Project 4: Map Reduce</h2>
+    </header>
+
+    <a href="http://shtech.org/course/ca/18s/">Computer Architecture I</a> <a href="http://www.shanghaitech.edu.cn/">ShanghaiTech University</a>
+    <br>
+    <a href="http://shtech.org/course/ca/18s/projects/3">Project 3</a> Project 4
+    <p>
+
+</p><h3>Introduction</h3>
+<p>This project 4 is to some extent a expandation of project 3. Students are required to implement a KNN removal with map reduce in python.</p> 
+
+<p>Here we assume students have already been very familiar to KNN removal (Project3), Python (SI100) and spark (Discussion and lab), no extra information will be provided on the web.</p>
+
+<h3>Tasks:</h3>
+     <ul>
+     <li>KNN removal with map reduce</li>
+     <li>run your code on computer cluster(Not been provided yet)</li>
+     </ul>
+
+
+<h3>Dataset:</h3>
+    <ul>
+    <li>Download from <a href="http://shtech.org/course/ca/18s/projects/3">Project 3</a></li>
+    </ul>
+<h3>Scripts</h3>
+    <ul>
+    <li><a href="../utils/io.py">utils/io.py</a>, for bin2nparray and nparray2bin</li>
+    <li><a href="../utils/knnRemoval.py">utils/knnRemoval.py</a>, reimplement of reference in <a href="http://shtech.org/course/ca/18s/projects/3">Project 3</a></li>
+    <li><a href="../utils/mapreduceKnnRemoval.py">utils/mapreduceKnnRemoval.py</a>, your map reduce implementation</li>
+    <li><a href="./demo.py">demo.py</a>, you can follow result from demo.py as ground truth</li>
+    <li>Image comparison and plot scripts will not be provided</li>
+    </ul>
+<p>The whole project can be found in <a href="./proj4.zip">proj4.zip</a> and please put your .bin in ./data</p>
+    </p><h3>Submission:</h3>
+    Check into autolab:
+    <ul>
+    <li>mapreduceKnnRemoval.py: Your fast implementation.</li>
+    </ul>
+    Do <b>NOT</b> check in any of those big test files - you will loose 10% of your score if you (ever) do so!
+
+    <h3>Grading</h3>
+    We will use a small map to test your program. If your output is incompatible you will receive 0 pts! We will show you the output of your program - keep it short! This way you will have a rough estimate how fast you are compared to the other students. But keep in mind that the autolab is a shared resource, so those values might differ a lot. <p>
+
+    Your program will be run on a 10 core (with HyperThreading 20) machine, running Ubuntu 14.04. The speed of each program will be noted. <br>
+    The slowest 33 percentile and below will receive a score of 80%. The fastest 15 percentile will receive a score of 100%. All other programs will get a score that is linearly scaled between those values.</p><p>
+    This project is only worth half of Project 1.1, 1.2, 2.1 or 2.2. (This project 11.11%, other (partial) projects: 22.22%).   
+
+    </p>
+
+
+<footer>
+<hr style="clear: both;">
+<div style="float:left">
+<address>
+Schwertfeger, Sören &lt;<code>soerensch</code> AT <code>shanghaitech.edu.cn</code>&gt;
+</address>
+Last modified: <time datetime="2018-06-02">2018-06-02</time>
+</div>
+
+</footer>
+
+
+</div></body></html>
